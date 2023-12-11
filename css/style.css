@@ -249,22 +249,22 @@ img {
   .benefits-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 72px;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
-  .benefits-list-item {
-    width: calc((100% - 72px) / 4);
-  }
+
   .benefits-list li:not(:last-child) {
     margin-right: 24px;
   }
   .benefits-list-header {
+    text-align: center;
     color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2; /* 120% */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
     letter-spacing: 0.4px;
     margin-bottom: 8px;
   }
@@ -272,7 +272,7 @@ img {
   .benefits-list-text {
     color: #434455;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
   }
@@ -293,8 +293,9 @@ img {
   .team-list {
     list-style: none;
     display: flex;
+    flex-direction: column;
     gap: 24px;
-    flex-direction: row;
+    align-items: center;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -304,7 +305,7 @@ img {
   margin-right: 24px;
 } */
   .team-list-item {
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -403,7 +404,7 @@ img {
     column-gap: 24px;
   }
   .portfolio-card {
-    width: calc((100% - 48px) / 3);
+    width: 288px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .portfolio-card:hover {
@@ -1013,22 +1014,22 @@ img {
   .benefits-list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
     flex-direction: row;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
   .benefits-list-item {
-    width: calc((100% - 72px) / 4);
+    width: 356px;
   }
-  .benefits-list li:not(:last-child) {
-    margin-right: 24px;
-  }
+
   .benefits-list-header {
     color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2; /* 120% */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
     letter-spacing: 0.4px;
     margin-bottom: 8px;
   }
@@ -1036,7 +1037,7 @@ img {
   .benefits-list-text {
     color: #434455;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
   }
@@ -1053,22 +1054,22 @@ img {
   }
 
   /* TEAM SECTION  */
-
+  .team-title {
+    margin-bottom: 72px;
+  }
   .team-list {
-    list-style: none;
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 24px;
     flex-direction: row;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
   }
 
   /* .team-list li:not(:last-child) {
   margin-right: 24px;
 } */
   .team-list-item {
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -1163,11 +1164,10 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 0;
-    row-gap: 48px;
-    column-gap: 24px;
+    gap: 72px 24px;
   }
   .portfolio-card {
-    width: calc((100% - 48px) / 3);
+    width: 356px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .portfolio-card:hover {
@@ -1577,8 +1577,47 @@ img {
     height: 56px;
   }
 }
-@media screen and(max-width:1157px) {
+@media screen and (max-width: 1157px) {
+  .benefit-img {
+    display: none;
+  }
 }
 /* =======      DESKTOP    ========= */
 @media screen and (min-width: 1158px) {
+  /*  BENEFITS SECTION  */
+  .hidden {
+    visibility: hidden;
+  }
+
+  .benefits-list-item {
+    width: 264px;
+  }
+
+  .benefits-list-header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .benefits-list-text {
+    font-weight: 400;
+  }
+  /*  PORTFOLIO SECTION */
+
+  .portfolio-title {
+    color: #2e2f42;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 72px;
+  }
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+  .portfolio-card {
+    width: 360px;
+  }
 }
